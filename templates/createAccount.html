@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+  
+  {% block title %}
+    Login - LMS
+  {% endblock %}
+
+  {% block content %}
+    <div class="main-page">
+      <div class="container text-center fs-6 justify-content-center align-items-center glass-effect">
+        <h1>Create Account</h1>
+          <form method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="Name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="create username" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="create password" required>
+            </div>
+            <div class="mb-3">
+              <label for="utype" class="form-label">User Type</label>
+              <select class="form-control" id="utype" name="utype">
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-outline-light">Create</button>
+          </form>
+      </div>
+    </div>
+  {% endblock %}

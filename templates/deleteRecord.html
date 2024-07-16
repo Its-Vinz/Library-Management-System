@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+  {% block title %}
+    Delete Record - LMS
+  {% endblock %}
+
+  {% block content %}
+    <div class="container mt-5">
+      <h1>Delete Record</h1>
+        <form method="POST">
+          <div class="mb-3">
+            <label for="serialNo" class="form-label">Serial Number</label>
+            <input type="number" class="form-control" name="serialNo" id="serialno" required>
+            <button type="submit" class="btn btn-outline-light">Delete</button>
+          </div>
+        </form>
+        <table class="table table-responsive table-hover text-center">
+          <thead class="thead-light">
+            <tr>
+              <th>Serial</th>
+              <th>Book Name</th>
+              <th>Book Author</th>
+              <th>Book Publication</th>
+              <th>Book Quantity</th>
+              <th>Book Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for record in records %}
+              <tr class="table-active">
+                <td>{{ record[0] }}</td>
+                <td>{{ record[1] }}</td>
+                <td>{{ record[2] }}</td>
+                <td>{{ record[3] }}</td>
+                <td>{{ record[4] }}</td>
+                <td>{{ record[5] }}</td>
+                <td>{{ record[6] }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <p class="text-center">Total Records: {{ records | length }}</p>
+    </div>
+  {% endblock %}

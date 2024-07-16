@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+  {% block title %}
+    Display Users - LMS
+  {% endblock %}
+
+  {% block content %}
+      <div class="container mt-5">
+          <h1>User Records</h1>
+            <table class="table table-responsive table-hover text-center">
+              <thead class="thead-light">
+                <tr>
+                  <th>User ID</th>
+                  <th>User Name</th>
+                  <th>User Password</th>
+                  <th>User Type</th>
+                  <th>Status</th>
+                  <th>Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for record in records %}
+                  <tr class="table-active">
+                    <td>{{ record[0] }}</td>
+                    <td>{{ record[1] }}</td>
+                    <td>{{ record[2] }}</td>
+                    <td>{{ record[3] }}</td>
+                    <td>{{ record[4] }}</td>
+                    <td>{{ record[5] }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            <p class="text-center">Total Records: {{ records | length }}</p>
+            <br>
+      </div>
+    </div>
+  {% endblock %}

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+  {% block title %}
+    Sort Record - LMS
+  {% endblock %}
+  
+  {% block content %}
+    <div class="main-page">
+      <div class="container mt-5 glass-effect">
+        <h1>Sort Record</h1>
+        <br>
+          <form method="POST" action="{{ url_for('sortRecord') }}">
+            <div class="mb-3">
+              <label for="sortBy" class="form-label">Sort by:</label>
+                <select class="form-control" id="sortby" name="sortBy">
+                  <option value="serialno">Serial No.(Ascending order)</option>
+                  <option value="name">Name (Ascending order)</option>
+                  <option value="publication">Publication (Ascending order)</option>
+                  <option value="author">Author (Ascending order)</option>
+                  <option value="serialnoDES">Serial No.(Descending order)</option>
+                  <option value="nameDES">Name (Descending order)</option>
+                  <option value="publicationDES">Publication (Descending order)</option>
+                  <option value="authorDES">Author (Descending order)</option>
+                </select>
+            </div>
+            <input type="text" name="sortValue" placeholder="Enter sort value" required>
+            <button type="submit" class="btn btn-outline-light">Search</button>
+          </form>
+          {% if records %}
+            <table class="table table-responsive table-hover text-center">
+              <thead class="thead-light">
+                <tr>
+                  <th>Serial</th>
+                  <th>Book Name</th>
+                  <th>Book Author</th>
+                  <th>Book Publication</th>
+                  <th>Book Quantity</th>
+                  <th>Book Price</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for record in records %}
+                  <tr class="table-active">
+                    <td>{{ record[0] }}</td>
+                    <td>{{ record[1] }}</td>
+                    <td>{{ record[2] }}</td>
+                    <td>{{ record[3] }}</td>
+                    <td>{{ record[4] }}</td>
+                    <td>{{ record[5] }}</td>
+                    <td>{{ record[6] }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+            <p class="text-center">Total Records: {{ records | length }}</p>
+            <br>
+      </div>
+    </div>
+  {% endblock %}

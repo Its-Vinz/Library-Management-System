@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+  
+  {% block title %}
+    Approval Panel - LMS
+  {% endblock %}
+
+  {% block content %}
+    <div class="main-page">
+      <div class="container text-center fs-6 justify-content-center align-items-center glass-effect">
+      <br>
+      <h4>Approval Panel</h4>
+      <hr>
+        <div class="btn-class">
+          <a href="{{ url_for('displayUsers') }}" class="btn btn-outline-light">Display Users</a>
+          <a href="{{ url_for('deleteUsers') }}" class="btn btn-outline-light">Delete User</a>
+          <a href="{{ url_for('updateUser') }}" class="btn btn-outline-light">Update User Status</a>
+          <a href="{{ url_for('logout') }}" class="btn btn-outline-light">Log-Out</a>
+        </div>
+        <a href="{{ url_for('AdminDashboard') }}" class="btn btn-outline-light"> < Go Back</a>
+      </div>
+    </div>
+  {% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+  
+  {% block title %}
+    Add Record - LMS
+  {% endblock %}
+
+  {% block content %}
+    <div class="main-page">  
+      <div class="container mt-5 glass-effect">
+        <h1>Add Record</h1>
+          <form method="POST">
+            <div class="mb-3">
+              <label for="bookName" class="form-label">Book Name</label>
+              <input type="text" class="form-control" id="Bname" name="bookName" required>
+            </div>
+            <div class="mb-3">
+              <label for="bookAuthor" class="form-label">Book Author</label>
+              <input type="text" class="form-control" id="Bauth" name="bookAuthor" required>
+            </div>
+            <div class="mb-3">
+              <label for="bookPublication" class="form-label">Book Publication</label>
+              <input type="text" class="form-control" id="Bpub" name="bookPublication" required>
+            </div>
+            <div class="mb-3">
+              <label for="bookQuantity" class="form-label">Quantity</label>
+              <input type="number" class="form-control" id="Bqty" name="bookQuantity" required>
+            </div>
+            <div class="mb-3">
+              <label for="bookPrice" class="form-label">Price</label>
+              <input type="number" class="form-control" id="Bprice" name="bookPrice" required>
+            </div>
+              <button type="submit" class="btn btn-outline-light">Add</button>
+          </form>
+      </div>
+    </div>
+  {% endblock %}

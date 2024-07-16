@@ -1,0 +1,119 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu;
+  background: linear-gradient(90deg, #756477 25%, #1F4172 45%, #756477 65%, #484E5D 100%);
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
+  color: white;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.glass-effect {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  /* padding: 30px; */
+  margin: 25px;
+  max-width: 90%;
+  width: 100%;
+}
+
+h1, h4 {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.btn-class {
+  padding-top: 2.5rem;
+  text-align: center;
+}
+
+.btn {
+  margin: 1rem;
+}
+
+.btn-outline-light {
+  margin-top: 10px;
+  border-radius: 24px;
+}
+
+.footer {
+  margin: 1.2rem;
+}
+
+.footer a{
+  text-decoration: none;
+  color: lightskyblue;
+  font-size: 0.9rem;
+}
+  
+  .footer h6{
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 576px) {
+  .glass-effect {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .glass-effect {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .glass-effect {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .glass-effect {
+    max-width: 50%;
+  }
+}

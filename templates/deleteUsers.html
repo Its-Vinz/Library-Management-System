@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+  {% block title %}
+    Delete Users - LMS
+  {% endblock %}
+  
+  {% block content %}
+    <div class="main-page">
+      <div class="container mt-5 glass-effect">
+        <h1>Delete Users</h1>
+          <form method="POST">
+            <div class="mb-3">
+              <label for="serialNo" class="form-label">User ID</label>
+              <input type="number" class="form-control" name="serialNo" id="serialno" required>
+              <button type="submit" class="btn btn-outline-light">Delete</button>
+            </div>
+          </form>
+          <table class="table table-responsive table-hover text-center">
+            <thead class="thead-light">
+              <tr>
+                  <th>User ID</th>
+                  <th>User Name</th>
+                  <th>User Password</th>
+                  <th>User Type</th>
+                  <th>Status</th>
+                  <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for record in records %}
+                <tr class="table-active">
+                  <td>{{ record[0] }}</td>
+                  <td>{{ record[1] }}</td>
+                  <td>{{ record[2] }}</td>
+                  <td>{{ record[3] }}</td>
+                  <td>{{ record[4] }}</td>
+                  <td>{{ record[5] }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <p class="text-center">Total Records: {{ records | length }}</p>
+      </div>
+    </div>
+  {% endblock %}

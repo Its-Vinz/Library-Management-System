@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+  {% block title %}
+    Search Record - LMS
+  {% endblock %}
+
+  {% block content %}
+    <div class="main-page">
+      <div class="container mt-5 glass-effect">
+        <h1>Search Record</h1>
+        <br>
+          <form method="POST" action="{{ url_for('searchRecord') }}">
+            <div class="mb-3">
+              <label for="searchBy" class="form-label">Search by:</label>
+                <select class="form-control" id="searchby" name="searchBy">
+                  <option value="serialno">Serial No.</option>
+                  <option value="name">Name</option>
+                  <option value="publication">Publication</option>
+                  <option value="author">Author</option>
+                </select>
+            </div>
+            <input type="text" name="searchValue" placeholder="Enter search value" required>
+            <button type="submit" class="btn btn-outline-light">Search</button>
+          </form>
+          {% if records %}
+            <table class="table table-responsive table-hover text-center">
+              <thead class="thead-light">
+                <tr>
+                  <th>Serial</th>
+                  <th>Book Name</th>
+                  <th>Book Author</th>
+                  <th>Book Publication</th>
+                  <th>Book Quantity</th>
+                  <th>Book Price</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for record in records %}
+                  <tr class="table-active">
+                    <td>{{ record[0] }}</td>
+                    <td>{{ record[1] }}</td>
+                    <td>{{ record[2] }}</td>
+                    <td>{{ record[3] }}</td>
+                    <td>{{ record[4] }}</td>
+                    <td>{{ record[5] }}</td>
+                    <td>{{ record[6] }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+            <p class="text-center">Total Records: {{ records | length }}</p>
+            <br>
+      </div>
+    </div>
+  {% endblock %}
