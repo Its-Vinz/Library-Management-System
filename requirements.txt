@@ -13,6 +13,3 @@ python-dotenv==1.0.1
 SQLAlchemy==2.0.31
 typing_extensions==4.12.2
 Werkzeug==3.0.3
-
-create requirements file!
-// pip freeze > requirements.txt
