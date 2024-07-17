@@ -21,7 +21,7 @@ This project aims to streamline library operations by offering functionalities f
 
 ## Deployment
 
-The application is deployed on Render cloud app hosting platform. You can access the live version of the app at: [LIVE VERSION].(https://lms-by-vinz.onrender.com).
+The application is deployed on Render cloud app hosting platform. You can access the live version of the app at: [LIVE VERSION](https://lms-by-vinz.onrender.com).
 
 
 ## Technologies Used
