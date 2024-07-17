@@ -8,16 +8,16 @@ This project aims to streamline library operations by offering functionalities f
 
 ## Features
 
-  CRUD Operations: Manage books and user accounts with Create, Read, Update, and Delete functionalities.
-  Sorting and Searching: Organize books by title, author, publication search by keywords.
-  User Management:
-    - User Panel: View borrowed books, fines, and account details.
-    - Account Creation: Create new user accounts with personalized information.
-  Admin Panel:
-    - Book Management: Add, edit, and remove books from the library.
-    - User Management: Manage user accounts, including suspension or deletion.
-  Authentication and Authorization: Secure login system with role-based access (admin vs. user).
-  Responsive Design: Optimized interface for desktops, tablets, and mobile devices.
+    CRUD Operations: Manage books and user accounts with Create, Read, Update, and Delete functionalities.
+    Sorting and Searching: Organize books by title, author, publication search by keywords.
+    User Management:
+      - User Panel: View borrowed books, fines, and account details.
+      - Account Creation: Create new user accounts with personalized information.
+    Admin Panel:
+      - Book Management: Add, edit, and remove books from the library.
+      - User Management: Manage user accounts, including suspension or deletion.
+    Authentication and Authorization: Secure login system with role-based access (admin vs. user).
+    Responsive Design: Optimized interface for desktops, tablets, and mobile devices.
 
 ## Deployment
 
@@ -46,5 +46,6 @@ To run the application locally, follow these steps:
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, feel free to submit a pull request.
+
 
 ## ⭐️ Star this repo if you like it!
