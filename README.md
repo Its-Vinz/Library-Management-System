@@ -47,4 +47,4 @@ To run the application locally, follow these steps:
 
 Contributions are welcome! If you'd like to contribute to this project, feel free to submit a pull request.
 
-## Crafted with ❤️ by Vinz
+## ⭐️ Star this repo if you like it!
